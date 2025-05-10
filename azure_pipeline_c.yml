@@ -1,0 +1,15 @@
+trigger: none
+pr: none
+
+
+resources:
+  pipelines:
+  - pipeline: pipeline (C)
+    source: pipeline (B)
+    trigger: true # Run pipeline (C) when any run of pipeline (B) completes
+    branch: main
+
+steps:
+  - script: |
+      echo "Run pipeline C"
+  
